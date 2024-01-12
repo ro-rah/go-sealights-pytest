@@ -13,4 +13,4 @@ RUN pip install requests
 
 
 # Run pytest when the container launches
-CMD ["pytest test_my_service.py"]
+CMD ["./pytest test_my_service.py"]

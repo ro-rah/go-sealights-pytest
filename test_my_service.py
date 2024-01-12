@@ -1,6 +1,6 @@
 import requests
 
-BASE_URL = "http://localhost:8080"
+BASE_URL = "http://127.0.0.1:8080"
 
 def test_method_a():
     response = requests.get(f"{BASE_URL}/methodA")
