@@ -9,6 +9,8 @@ COPY . /app
 
 # Install pytest
 RUN pip install --no-cache-dir pytest
+RUN pip install requests
+
 
 # Run pytest when the container launches
-CMD ["pytest"]
+CMD ["pytest test_my_service.py"]
