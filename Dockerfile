@@ -10,7 +10,8 @@ COPY . /app
 # Install pytest
 RUN pip install --no-cache-dir pytest
 RUN pip install requests
+RUN pip install sealights-python-agent
 
 
 # Run pytest when the container launches
-CMD ["./pytest test_my_service.py"]
+CMD ["sl-python", "pytest", "--tokenfile", "sltoken.txt", "--teststage", "Automation", "--labid", "docker_go_sealights"]
